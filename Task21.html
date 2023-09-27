@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style type="text/css">
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 30px;
+            padding: auto;
+        }
+        h1 {
+            color: #333;
+        }
+
+        input[type="number"] {
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        p {
+            font-size: 18px;
+            color: #333;
+            margin-top: 10px;
+        }
+    </style>
+    <script>
+        function multiply()
+        {
+            num1=document.getElementById("firstnumber").value;
+            num2=document.getElementById("secondnumber").value;
+            document.getElementById("result").innerHTML=num1*num2;
+        }
+        function divide()
+        {
+            num1=document.getElementById("firstnumber").value;
+            num2=document.getElementById("secondnumber").value;
+            document.getElementById("result").innerHTML=num1/num2;
+        }
+    </script>
+</head>
+<body>
+    <form>
+        1st number :<input type="text" id="firstnumber" />
+        <br>
+        2nd number : <input type="text" id="secondnumber" />
+        <br>
+        <input type="button" onclick="multiply()" value="Multiply">
+        <input type="button" onclick="divide()" value="Divide">
+    </form>
+    <p>The Result is: <br>
+    <span id="result"></span>    
+    </p>
+</body>
+</html>
